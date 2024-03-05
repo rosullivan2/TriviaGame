@@ -18,9 +18,9 @@ If not, use this link to download: https://www.python.org/downloads/
 
 To run Trivia Game on your local machine, follow these steps:
 
-1. Clone the repository: git clone https://github.com/yourusername/TriviaGame.git
-2. Navigate to the project directory: cd TriviaGame
-3. Run the Python script: python3 trivia.py
+1. Clone the repository: 'git clone https://github.com/yourusername/TriviaGame.git'
+2. Navigate to the project directory: 'cd TriviaGame'
+3. Run the Python script: 'python3 trivia.py'
 
 ## Issues To Fix
 1. Implement a timer feature to add a time constraint to each question.

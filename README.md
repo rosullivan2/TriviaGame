@@ -22,7 +22,7 @@ To run Trivia Game on your local machine, follow these steps:
 2. Navigate to the project directory: `cd TriviaGame`
 3. Run the Python script: `python3 trivia.py`
 
-## Issues To Fix
+## To Fix/Add
 1. Implement a timer feature to add a time constraint to each question.
 2. Implement a high score tracking. Create a leaderboard for the high scores, then display it at the end of the game.
 3. Expand the Trivia Game by adding categories. Allow the user to choose a specific category (science, history, sports, etc.)

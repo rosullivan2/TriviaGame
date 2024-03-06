@@ -15,15 +15,28 @@
 
 ## How to Contribute
 1. Fork the repository and clone it locally.
-2. Create a new branch for your feature or bug fix: `git checkout -b feature/your-feature-name`.
-3. Make your changes and ensure they adhere to the coding standards.
-4. Update documentation. Include a description of what changes you made to the code.
-5. Push your changes to your fork and submit a pull request to the `main` branch of the main repository.
-6. Ensure your pull request includes a clear description of the changes made and the reasoning behind them.
+2. Make your changes and ensure they adhere to the coding standards.
+3. Update documentation. Include a description of what changes you made to the code.
+4. Push your changes to your fork and submit a pull request to the `main` branch of the main repository.
+5. Ensure your pull request includes a clear description of the changes made and their reasoning.
 
 ## How to Run the Application
 - Clone the repository: `git clone https://github.com/yourusername/TriviaGame.git`
 - Navigate to the project directory: `cd TriviaGame`
 - Run the Python script: `python3 trivia.py`
+
+# Testing
+
+## Running Tests
+To run the unit tests for the trivia game, follow these steps:
+
+1. Open a terminal or command prompt.
+2. Navigate to the directory where the test script (test_trivia.py) is located.
+3. Run the test script using the following command: python3 trivia_test.py
+4. After running the unit tests, you will see the test results in the terminal.
+   If test(s) fail, review the failure and make the necessary fixes to the code. Rerun the tests to ensure the problem has been solved.
+ 
+
+
 
 

@@ -31,7 +31,8 @@ def get_user_answer():
             print("Invalid input. Please enter a number between 1 and 4.")
 
 #function that implements the triva game play
-def play_trivia_game(questions):
+#function that implements the triva game play
+def play_trivia_game(questions, lives=3):  # Add 'lives' with a default value of 3
     score = 0
     random.shuffle(questions)
     for question in questions:
@@ -42,8 +43,15 @@ def play_trivia_game(questions):
             score += 1
         else:
             print(f"Wrong! The correct answer is {question['options'][question['answer'] - 1]}.")
-        print() 
+            lives -= 1  # Decrease the number of lives if the answer is wrong
+            print(f"You have {lives} {'life' if lives == 1 else 'lives'} left.")  # Display singular or plural form of 'life'
+            if lives == 0:
+                print("Game Over! You ran out of lives.")
+                break  # End the game if the player runs out of lives
+        print()
     print(f"Game Over! Your final score is {score}/{len(questions)}.")
+
+
 
 #main function
 def main():

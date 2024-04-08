@@ -53,11 +53,11 @@ def play_trivia_game(questions, lives=3):  # Add 'lives' with a default value of
 
 
 #main function
-def main():
+def main_function():
     questions = read_questions_from_file("questions.txt")
     print("Welcome to the Trivia Game!")
     play_trivia_game(questions)
 
 
 if __name__ == "__main__":
-    main()
+    main_function()

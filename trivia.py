@@ -31,7 +31,6 @@ def get_user_answer():
             print("Invalid input. Please enter a number between 1 and 4.")
 
 #function that implements the triva game play
-#function that implements the triva game play
 def play_trivia_game(questions, lives=3):  # Add 'lives' with a default value of 3
     score = 0
     random.shuffle(questions)
@@ -54,11 +53,11 @@ def play_trivia_game(questions, lives=3):  # Add 'lives' with a default value of
 
 
 #main function
-def main():
+def main_function():
     questions = read_questions_from_file("questions.txt")
     print("Welcome to the Trivia Game!")
     play_trivia_game(questions)
 
 
 if __name__ == "__main__":
-    main()
+    main_function()

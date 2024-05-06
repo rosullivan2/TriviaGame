@@ -1,0 +1,16 @@
+Liana Ikoyan
+ikoyan@chapman.edu
+May 4th, 2024
+
+-Added categories functionality:
+ -Added 4 new question files with 5 questions each
+ -Added function allowing user to choose a category
+-Altered unit test
+
+Questions Citations:
+https://www.geeksforgeeks.org/science-trivia-questions-people-always-get-wrong/#
+https://www.britannica.com/quiz/pop-culture-quiz 
+https://en.wikipedia.org/wiki/List_of_best-selling_video_game_franchises
+https://www.britannica.com/quiz/ultimate-animals-quiz
+https://www.britannica.com/quiz/a-world-of-food
+

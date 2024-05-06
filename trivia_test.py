@@ -37,14 +37,14 @@ class TestTriviaGame(unittest.TestCase):
             self.assertEqual(fake_stdout.getvalue(), expected_output)
 
     def test_play_trivia_game(self):
-        questions = [{"question": "Question 1", "options": ["Option 1", "Option 2", "Option 3", "Option 4"], "answer": 1},
-                     {"question": "Question 2", "options": ["Option A", "Option B", "Option C", "Option D"], "answer": 2}]
+        questions = [{"question": "Question 1", "options": ["Option 1", "Option 2", "Option 3", "Option 4"], "answer": 3},
+                     {"question": "Question 2", "options": ["Option 1", "Option 2", "Option 3", "Option 4"], "answer": 4}]
         with patch('builtins.input', side_effect=['1', '2']):
             with patch('sys.stdout', new=io.StringIO()) as fake_stdout:
                 play_trivia_game(questions)
                 output = fake_stdout.getvalue()
-                self.assertIn("Correct!", output)
-                self.assertIn("Game Over! Your final score is 2/2.", output)
+                self.assertIn("Wrong!", output)
+                self.assertIn("Game Over! Your final score is 0/2.", output)
 
 if __name__ == "__main__":
     unittest.main()

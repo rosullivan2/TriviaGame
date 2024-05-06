@@ -39,12 +39,13 @@ class TestTriviaGame(unittest.TestCase):
     def test_play_trivia_game(self):
         questions = [{"question": "Question 1", "options": ["Option 1", "Option 2", "Option 3", "Option 4"], "answer": 3},
                      {"question": "Question 2", "options": ["Option 1", "Option 2", "Option 3", "Option 4"], "answer": 4}]
-        with patch('builtins.input', side_effect=['1', '2']):
-            with patch('sys.stdout', new=io.StringIO()) as fake_stdout:
-                play_trivia_game(questions)
-                output = fake_stdout.getvalue()
-                self.assertIn("Wrong!", output)
-                self.assertIn("Game Over! Your final score is 0/2.", output)
+         with patch('builtins.input', side_effect=['5', '2']):  # Simulate lifeline usage (selecting option 5) and user input
+         with patch('sys.stdout', new=io.StringIO()) as fake_stdout:
+            play_trivia_game(questions)
+            output = fake_stdout.getvalue()
+            self.assertIn("Implementing 50/50 lifeline...", output)  
+            self.assertIn("Correct!", output)  
+            self.assertIn("Game Over! Your final score is 2/2.", output)  
 
 if __name__ == "__main__":
     unittest.main()

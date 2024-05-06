@@ -1,5 +1,20 @@
 import random
 
+#function to choose category and get file name associated with it
+def choose_category():
+    while True: 
+        #file_name = "questions.txt"
+        user_input = int(input("Which category would you like to try?\n 1. General 2. Animals 3. Food 4. Pop Culture 5. Science\n"))
+        if 1 <= int(user_input) <= 5:
+            if user_input == 2: file_name = "animal_questions.txt"
+            elif user_input == 3: file_name = "food_questions.txt"
+            elif user_input == 4: file_name = "pop_culture_questions.txt"
+            elif user_input == 5: file_name = "science_questions.txt"
+            else: file_name = "questions.txt" 
+            return file_name
+        else:
+            print("Invalid input. Please enter a number between 1 and 5.")
+
 #reading the .txt file to get the questions, answer options, and the answer
 def read_questions_from_file(filename):
     questions = []
@@ -51,11 +66,10 @@ def play_trivia_game(questions, lives=3):  # Add 'lives' with a default value of
     print(f"Game Over! Your final score is {score}/{len(questions)}.")
 
 
-
 #main function
 def main_function():
-    questions = read_questions_from_file("questions.txt")
     print("Welcome to the Trivia Game!")
+    questions = read_questions_from_file(choose_category())
     play_trivia_game(questions)
 
 
